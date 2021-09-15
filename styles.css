@@ -1,0 +1,298 @@
+/*main-setting*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    margin:0;
+    padding:0;
+}
+
+body{    
+    color: rgb(24, 22, 22);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+/*section navbar*/
+
+#navbar{
+    background: white;  
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    padding: 20px 5px 10px 5px;    
+}
+
+#navbar ul li{
+    list-style: none;
+    margin: 0 10px;
+    padding: 5px 10px;    
+}
+
+#navbar ul li a{
+    color: #858585;
+    text-decoration: none;    
+}
+
+#navbar ul li a:hover{ 
+    border: 2px solid #a50101;
+    border-radius: 30px;
+    color: #858585;     
+    padding: 10px 20px;
+    transition: all 0.4s ease;    
+}
+
+/*header-section*/
+
+#welcome-section{
+    background: url(https://i.ibb.co/59jC3Dm/proyectos.jpg);
+    background-position: top;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+    margin-top:70px;
+    position: relative;    
+} 
+
+#welcome-section::before{
+    content:"";
+    background: rgb(255, 255, 255, 0.7);
+    inset: 0;
+    position:absolute;    
+    z-index:-1;
+}
+
+.hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height:calc(100vh - 70px);
+    justify-content: center;     
+}
+
+.hero h1::before{
+    background: rgb(165, 1, 1);
+    color:white;
+    content:"hello";    
+    font-family: 'Cedarville Cursive', cursive;
+    font-size:1.5rem;    
+}
+
+.hero h1{
+    font-size:2rem ;
+    margin:0;
+    padding:0;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;    
+}
+
+.cursive{
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 1.8rem;    
+}
+
+/*proyects-section*/
+
+#proyects{
+    margin: 0 auto;
+    padding: 50px 15px;   
+}
+
+h2{
+    font-size: 2.5rem;    
+    text-align: center;
+}
+
+.container{ 
+    align-items: center;   
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;      
+}
+
+.proyect-item img{
+    border: 3px solid rgba(145, 131, 131, 0.2);
+    width: 100%;
+           
+}
+
+
+#proyects h3{
+    font-size: 1.5rem;
+    margin: 0;
+    padding:2px;    
+}
+
+#proyects p{
+    font-size: 0.8rem;
+    margin: 0;    
+    padding:5px;
+}
+
+#proyects a{
+    border: 2px solid #a50101;
+    border-radius: 30px;
+    color: #858585;    
+    padding: 4px 10px;
+    text-decoration: none;
+}
+
+#proyects a:hover{    
+    letter-spacing: 1px;
+    transition: all 0.4s ease;    
+}
+
+.proyect-item{
+    margin:0;
+    padding: 50px 0;
+}
+
+/*about-section*/
+
+#about{
+    background: rgba(238, 236, 236, 0.3);
+    padding: 30px 0;    
+}
+
+.graph{
+   display: flex;
+   justify-content: center;    
+} 
+
+.icon{
+    align-items: center;
+    display: flex;
+    flex-direction: column;    
+    margin: 0 auto;
+    width: 60%;
+}
+
+.about-col{
+    padding: 50px 0;
+}
+
+
+.about-col img{     
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+button{
+    border: 2px solid #a50101;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 10px 20px;    
+}
+
+button a{    
+    color:#858585;
+    font-size: 1rem;
+    text-decoration: none;    
+}
+
+button a:hover{
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+/*contact-section*/
+
+#contact{
+    margin: 0 auto;
+    padding: 0;    
+}
+
+.data{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding:30px 0;   
+}
+
+.data ul{
+    padding:0;
+}
+
+.data li{
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.data li h3{
+    margin:5px 0
+}
+
+.data li p{
+   margin:0;
+}
+
+.contact-col .coffee{
+    display: none;
+}
+
+.contact-col h2{
+    padding: 0 20px;
+}    
+
+@media (min-width: 900px){
+    html{
+        font-size: 20px;
+    }
+
+    .about-col{
+        width: 50%;
+    }
+
+    .about-container{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;        
+    }
+
+    .contact-col{
+        width: 50%;
+    }
+
+    .contact-container{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;        
+    }
+
+    .contact-col .coffee{
+        display: unset;
+           }
+
+   #img-coffee{    
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+      }
+   }
+
+   @media (min-width: 1300px){
+       .proyect-item{
+           margin:0 50px;
+       }
+    }
+
+
